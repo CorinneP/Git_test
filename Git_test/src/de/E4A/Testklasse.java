@@ -22,17 +22,34 @@ public class Testklasse {
 			i++;
 		}
 		
-		/*public static int max(int[] i){
-			if(i != null && i.length >0){
-				int max=0;
-				for(int j=0; j < i.length; j++){
-					if(max<i[j]){
-						max = i[j];
-					}
-				}
-				return max;
-			}
-		}*/
+		int maximum = max(zahlen);
+		int minimum = min(zahlen);
+		System.out.println("Max: " + maximum+ "\nMin: " + minimum);
+		
+		
 	}
 
+
+	public static int max(int[] i){
+		int max = i[0];
+		for(int j = 1 ; j < i.length; j++){
+			if(max < i[j]){
+				max = i[j];
+			}
+		}
+		return max;
+	}
+
+	public static int min(int[] i){
+		int min = i[0];
+		for(int j = 0; j < i.length; j++){
+			if (min > i [j]){
+				min = i [j];
+			}
+		}
+		return min;
+	}
+	
+
+	
 }
